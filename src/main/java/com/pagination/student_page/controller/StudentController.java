@@ -26,4 +26,9 @@ public class StudentController {
                                         @RequestParam(value = "sortDirection", defaultValue = "ASC", required = false) String sortDirection) {
         return studentService.getAllStudents(pageNumber, pageSize, sortBy, sortDirection);
     }
+
+    @GetMapping("/getById")
+    public Student getStudentById(@RequestParam Long id) {
+        return studentService.getStudentById(id);
+    }
 }

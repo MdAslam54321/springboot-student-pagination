@@ -10,4 +10,6 @@ public interface StudentService {
     Student createStudent(Student student);
 
     List<Student> getAllStudents( Integer pageNumber, Integer pageSize, String sortBy, String sortDirection);
+
+    Student getStudentById(Long id);
 }
