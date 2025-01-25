@@ -29,4 +29,9 @@ public class StudentServiceImpl implements StudentService{
         List<Student> studentList = students.getContent();
         return studentList;
     }
+
+    @Override
+    public Student getStudentById(Long id) {
+        return studentRepository.getStudentById(id);
+    }
 }
